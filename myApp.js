@@ -1,7 +1,10 @@
 const express = require('express');
-const helment = require('helmet');
 const app = express();
+const userRoutes = require('./routes/userRoutes'); // ✅ Correct import
 
+app.use('/users', userRoutes); // ✅ Correct usage
+
+app.listen(3000, () => console.log('Server running on port 3000'));
 
 
 
